@@ -115,8 +115,8 @@ app.post('/api/auth/logout', (req, res) => {
 app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/dist/index.html');
 });
-
-app.listen(5000);
+var port = normalizePort(process.env.PORT || '5000');
+app.listen(port);
 
 console.log('Express listening on port 5000.');
 
