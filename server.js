@@ -121,10 +121,10 @@ app.listen(port);
 console.log('Express listening on port 5000.');
 
 //Open browser
-var opn = require('opn');
+// var opn = require('opn');
 
-opn('http://localhost:5000').then(() => {
-    console.log('Browser closed.');
-});
+// opn('http://localhost:5000').then(() => {
+//     console.log('Browser closed.');
+// });
 
 
