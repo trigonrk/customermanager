@@ -111,6 +111,21 @@ app.post('/api/auth/logout', (req, res) => {
     res.json(true);
 });
 
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
 // redirect all others to the index (HTML5 history)
 app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/dist/index.html');
