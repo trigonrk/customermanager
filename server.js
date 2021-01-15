@@ -130,11 +130,16 @@ function normalizePort(val) {
 app.all('/*', function(req, res) {
     res.sendFile(__dirname + '/dist/index.html');
 });
-var port = normalizePort(process.env.PORT || '5000');
-app.listen(port);
+// var port = normalizePort(process.env.PORT || 5000);
+app.listen(process.env.PORT);
 
 console.log('Express listening on port 5000.');
-
+// var options = {
+//   key: fs.readFileSync('certificates/private.key'),
+//   cert: fs.readFileSync('certificates/certificate.crt'),
+//   ca: fs.readFileSync('certificates/ca_bundle.crt')
+// };
+// https.createServer(options, app).listen(443);
 //Open browser
 // var opn = require('opn');
 
